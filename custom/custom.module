@@ -1,0 +1,31 @@
+<?php
+
+/**
+ * @file custom.module
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function custom_theme() {
+  return [
+    'custom_dy_block' => [
+      'variables' => [
+        'title' => NULL,
+        'description' => NULL,
+        'image' => NULL,
+      ],
+      'template' => 'custom-dynamic-block',
+    ],
+
+  ];
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function custom_preprocess_block(&$variables) {
+  if ($variables['plugin_id'] == 'custom_dynamic_block') {
+    $variables['#attached']['library'][] = 'custom/custom';
+  }
+}

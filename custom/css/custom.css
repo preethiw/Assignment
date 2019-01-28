@@ -1,0 +1,29 @@
+.row {
+  float: left;
+  margin: 10px;
+  position: relative;
+  width: 350px;
+  min-height: 350px;
+}
+
+.tile-title {
+  font-size: 24px;
+  color: #b88b2d;
+  font-weight: bold;
+  margin: 0;
+}
+.tile-image img {
+  max-height: 350px;
+}
+
+@media only screen and (max-width:899px) {
+  .row {
+    width: 100%;
+  }
+  .tile-title {
+    font-size: 18px;
+    color: #b88b2d;
+    font-weight: bold;
+    margin: 0;
+  }
+}
